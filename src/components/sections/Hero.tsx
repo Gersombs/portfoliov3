@@ -32,7 +32,11 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex flex-col justify-center min-h-screen w-full max-w-5xl mx-auto px-6 py-12 lg:px-0">
+    <section
+      // Mobile: anchor content to the top to avoid large whitespace
+      // Desktop: keep centered for balanced layout
+      className="relative flex flex-col justify-start md:justify-center min-h-screen w-full max-w-5xl mx-auto px-6 pt-2 pb-12 md:py-12 lg:px-0"
+    >
 
       {/*
         Badge: Disponibilidad
