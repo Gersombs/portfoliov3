@@ -35,7 +35,7 @@ export default function Hero() {
     <section
       // Mobile: anchor content to the top to avoid large whitespace
       // Desktop: keep centered for balanced layout
-      className="relative flex flex-col justify-start md:justify-center min-h-screen w-full max-w-5xl mx-auto px-6 pt-2 pb-12 md:py-12 lg:px-0"
+      className="relative flex flex-col justify-start md:justify-center min-h-screen w-full max-w-5xl mx-auto px-6 pt-6 pb-12 md:py-12 lg:px-0"
     >
 
       {/*
