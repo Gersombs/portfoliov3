@@ -137,14 +137,14 @@ export default function CommandBar(): JSX.Element {
 
       {/* MOBILE MENU OVERLAY (shown when `isOpen`) */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex items-center justify-center animate-in fade-in duration-200">
-          <nav className="flex flex-col items-center gap-8" role="navigation" aria-label="Mobile navigation">
+        <div className="md:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex items-center justify-center overflow-hidden max-w-[100vw] animate-in fade-in duration-200">
+          <nav className="flex flex-col items-center gap-8 w-full max-w-[90vw] text-center" role="navigation" aria-label="Mobile navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={(e) => scrollToSection(e, link.id)}
-                className={`font-heading text-3xl transition-all hover:tracking-widest ${
+                className={`font-heading text-3xl transition-all hover:tracking-widest whitespace-nowrap ${
                   activeSection === link.id ? "text-neon-cyan" : "text-white hover:text-neon-cyan"
                 }`}
                 aria-current={activeSection === link.id ? "page" : undefined}
