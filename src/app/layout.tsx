@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { LazyMotion, domAnimation } from "framer-motion";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import CommandBar from "@/components/ui/CommandBar";
@@ -85,21 +86,23 @@ export default function RootLayout({
     // A11Y: 
     <html lang="es" className="scroll-smooth">
       <body className={`${inter.variable} ${space.variable} font-body antialiased relative bg-background text-primary overflow-x-hidden selection:bg-neon-cyan/30 selection:text-white`}>
-        <LanguageProvider>
-          {/*
-            Main landmark
-            - Provides the primary document landmark for improved accessibility.
-          */}
-          <main className="min-h-screen flex flex-col items-center justify-between">
-            {children}
-          </main>
+        <LazyMotion features={domAnimation}>
+          <LanguageProvider>
+            {/*
+              Main landmark
+              - Provides the primary document landmark for improved accessibility.
+            */}
+            <main className="min-h-screen flex flex-col items-center justify-between">
+              {children}
+            </main>
 
-          {/*
-            Global navigation (visually outside the main landmark)
-            - Rendered here to keep the main content as the primary landmark.
-          */}
-          <CommandBar />
-        </LanguageProvider>
+            {/*
+              Global navigation (visually outside the main landmark)
+              - Rendered here to keep the main content as the primary landmark.
+            */}
+            <CommandBar />
+          </LanguageProvider>
+        </LazyMotion>
         <SpeedInsights />
       </body>
     </html>
