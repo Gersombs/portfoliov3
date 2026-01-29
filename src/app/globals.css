@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
+/* --- 1. AQUÍ DEFINES TU TEMA (Reemplaza al tailwind.config.ts) --- */
+@theme {
+  /* Colores */
+  --color-background: var(--bg-primary);
+  --color-surface: var(--bg-secondary);
+  --color-elevated: var(--bg-elevated);
+  
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+
+  --color-neon-cyan: var(--neon-cyan);
+  --color-neon-magenta: var(--neon-magenta);
+  --color-neon-green: var(--neon-green);
+  --color-neon-red: var(--neon-red);
+
+  /* Fuentes */
+  --font-heading: var(--font-space), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+}
+
+/* --- 2. TUS VARIABLES DE CSS (Los valores reales) --- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Paleta Base */
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #111111;
+  --bg-elevated: #161616;
+
+  --text-primary: #F5F5F5;
+  --text-secondary: #B3B3B3;
+  --text-muted: #7A7A7A;
+
+  /* Neones */
+  --neon-cyan: #00F0FF;
+  --neon-magenta: #FF2A6D;
+  --neon-green: #2BFF88;
+  --neon-red: #FF4555;
+
+  /* Fuentes (Mapeadas desde layout.tsx) */
+  --font-space: "Space Grotesk", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* --- 3. ESTILOS BASE --- */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-elevated) var(--bg-primary);
+}
+
+.text-glitch {
+  text-shadow: 2px 0 var(--neon-magenta), -2px 0 var(--neon-cyan);
 }

@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gersom Bahena | Frontend Developer Portfolio V2
 
-## Getting Started
+![Portfolio Preview](public/og-image.webp)
 
-First, run the development server:
+> An immersive, high-performance portfolio built with **Next.js 14 (App Router)** and **Tailwind CSS**. Designed with a focus on Accessibility (A11y), SEO, and a distinctive "Glitch/Cyberpunk" aesthetic.
 
-```bash
+## 🚀 Key Features
+
+- **⚡ Zero Layout Shift:** Optimized images and component architecture to prevent CLS.
+- **🌐 Internationalization (i18n):** Full support for English and Spanish via React Context without external bloat.
+- **♿ Accessibility First:**
+  - Semantic HTML5 structure.
+  - `aria-labels` and roles for screen readers.
+  - `focus-visible` states for keyboard navigation.
+  - Reduced motion support for sensitive users.
+- **🎨 Glitch UI System:** Custom Tailwind configuration for neon effects, scanlines, and CRT animations.
+- **🔒 Secure Contact Form:** Implementation of Honeypot fields and Time-based validation to prevent spam without CAPTCHA.
+- **📱 Mobile First:** Responsive design ensuring a native-app feel on mobile devices.
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Form Handling:** Server Actions / API Routes + Nodemailer
+- **Deployment:** [Vercel](https://vercel.com/)
+
+## 🏃‍♂️ Getting Started
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Gersombs/portfolio-v2.git](https://github.com/Gersombs/portfolio-v2.git)
+   cd portfolio-v2
+Install dependencies:
+
+Bash
+npm install
+Set up Environment Variables: Create a .env.local file in the root directory:
+
+Fragmento de código
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+Run the development server:
+
+Bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 with your browser to see the result.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📂 Project Structure
+Bash
+src/
+├── app/              # App Router pages and layout
+├── components/       
+│   ├── sections/     # Landing page sections (Hero, Projects, Contact)
+│   ├── ui/           # Reusable UI components (Buttons, Cards)
+│   └── sub/          # Utility components
+├── context/          # Global state (LanguageContext)
+├── hooks/            # Custom hooks (useActiveSection)
+└── lib/              # Utilities and helpers
+🔍 SEO & Performance Strategy
+This project follows Core Web Vitals best practices:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+LCP (Largest Contentful Paint): Critical images are preloaded with priority.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+CLS (Cumulative Layout Shift): Fixed aspect ratios and overlay techniques for project cards.
 
-## Learn More
+SEO: Dynamic metadata, OpenGraph tags, and semantic landmarks.
 
-To learn more about Next.js, take a look at the following resources:
+📬 Contact
+Gersom Bahena Frontend Developer & UI Engineer
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+LinkedIn
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2026 Gersom Bahena. Built with code and caffeine.
