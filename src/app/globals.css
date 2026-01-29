@@ -44,6 +44,10 @@
 }
 
 /* --- 3. ESTILOS BASE --- */
+/* Ensure the page never horizontally overflows (prevents layout shift) */
+html {
+  overflow-x: hidden;
+}
 body {
   color: var(--text-primary);
   background: var(--bg-primary);
