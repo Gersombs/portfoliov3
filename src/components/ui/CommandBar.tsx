@@ -60,17 +60,16 @@ export default function CommandBar(): JSX.Element {
   return (
     <>
       {/* COMMAND BAR: floating container */}
-      <div
-        className="fixed z-50 transition-all duration-300
-        bottom-6
-        left-4 right-4 w-auto transform-none
-        md:left-1/2 md:right-auto md:-translate-x-1/2 md:w-auto
-      "
-      >
-        <div className="flex items-center justify-between bg-elevated/90 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl shadow-black/50
-          px-4 py-3 
-          md:px-6 md:py-3
-        ">
+        <div
+          className="
+            fixed z-50 transition-all duration-300
+            bottom-6 left-4 right-4
+            max-w-[calc(100vw-2rem)]
+            md:left-1/2 md:right-auto md:-translate-x-1/2 md:max-w-none
+          "
+        >
+        <div className="
+          flex items-center justify-between w-full overflow-hidden bg-elevated/90 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl shadow-black/50 px-4 py-3 md:px-6 md:py-3">
 
           {/* 1. STATUS + LOGO */}
           <Link href="/" onClick={scrollToTop} className="group flex items-center gap-3 shrink-0">
@@ -82,7 +81,7 @@ export default function CommandBar(): JSX.Element {
             ></div>
 
             {/* Small label next to logo. Truncate to avoid layout shift on tiny screens. */}
-            <span className="font-mono text-[10px] md:text-xs text-muted group-hover:text-white transition-colors tracking-widest truncate max-w-[100px] md:max-w-none">
+            <span className="font-mono text-[10px] md:text-xs text-muted group-hover:text-white transition-colors tracking-widest truncate max-w-25 md:max-w-none">
               SYS.ONLINE
             </span>
           </Link>
@@ -111,7 +110,7 @@ export default function CommandBar(): JSX.Element {
             {/* Language toggle button */}
             <button
               onClick={toggleLanguage}
-              className="font-mono text-[10px] md:text-xs text-secondary hover:text-white transition-colors uppercase w-6 md:w-8 text-center"
+              className="font-mono text-[10px] md:text-xs text-muted group-hover:text-white transition-colors tracking-widest truncate max-w-20 md:max-w-none"
               aria-label="Cambiar idioma"
             >
               [{language.toUpperCase()}]
@@ -126,10 +125,10 @@ export default function CommandBar(): JSX.Element {
               aria-label="Menú"
               aria-expanded={isOpen}
             >
-              <div className="flex flex-col gap-[3px] items-end w-5">
-                <span className={`h-0.5 bg-white transition-all duration-300 origin-right ${isOpen ? "w-5 -rotate-45 translate-y-[1px]" : "w-5"}`}></span>
+              <div className="flex flex-col gap-0.75 items-end w-5">
+                <span className={`h-0.5 bg-white transition-all duration-300 origin-right ${isOpen ? "w-5 -rotate-45 translate-y-px" : "w-5"}`}></span>
                 <span className={`h-0.5 bg-white transition-all duration-300 ${isOpen ? "opacity-0" : "w-3 group-hover:w-5"}`}></span>
-                <span className={`h-0.5 bg-white transition-all duration-300 origin-right ${isOpen ? "w-5 rotate-45 -translate-y-[1px]" : "w-5"}`}></span>
+                <span className={`h-0.5 bg-white transition-all duration-300 origin-right ${isOpen ? "w-5 rotate-45 -translate-y-px" : "w-5"}`}></span>
               </div>
             </button>
           </div>
