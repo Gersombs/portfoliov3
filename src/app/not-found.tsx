@@ -40,7 +40,7 @@ export default function NotFound() {
 
       {/* 3. Botón de Regreso */}
       <Link
-        href="/"
+        href="/home"
         className="group relative px-8 py-4 bg-white text-black font-mono font-bold text-sm tracking-wide overflow-hidden hover:bg-neon-cyan transition-colors duration-300 flex items-center justify-center"
       >
         <span className="absolute top-0 left-0 w-full h-0.5 bg-black/10 group-hover:animate-pulse"></span>

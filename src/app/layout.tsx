@@ -28,7 +28,7 @@ const space = Space_Grotesk({
  * Application-level metadata used by Next.js for SEO and social previews.
  */
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.gersombahena.online'), 
+  metadataBase: new URL('https://gersombahena.dev'), 
   title: {
     default: "Gersom Bahena | Frontend Developer & UI Engineer",
     template: "%s | Gersom Bahena"
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_MX",
-    url: "https://www.gersombahena.online",
+    url: "https://gersombahena.dev",
     title: "Gersom Bahena | Frontend Developer",
     description: "Ingeniería Frontend y Diseño UI de alto nivel. Mira mi portafolio.",
     siteName: "Gersom Bahena Portfolio",
     images: [
       {
-        url: "/og-image.wepb", 
+        url: "/og-image.webp", 
         width: 1200,
         height: 630,
         alt: "Gersom Bahena Portfolio Preview",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gersom Bahena | Frontend Developer",
     description: "Ingeniería Frontend y Diseño UI de alto nivel.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.webp"],
   },
   robots: {
     index: true,
