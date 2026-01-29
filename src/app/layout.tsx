@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import CommandBar from "@/components/ui/CommandBar";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 /**
  * Font optimization
@@ -99,7 +100,7 @@ export default function RootLayout({
           */}
           <CommandBar />
         </LanguageProvider>
-        
+        <SpeedInsights />
       </body>
     </html>
   );
