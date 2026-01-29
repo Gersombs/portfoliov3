@@ -49,6 +49,7 @@ body {
   background: var(--bg-primary);
   scrollbar-width: thin;
   scrollbar-color: var(--bg-elevated) var(--bg-primary);
+  overflow-x: hidden;
 }
 
 .text-glitch {
