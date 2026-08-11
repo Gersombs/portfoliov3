@@ -1,0 +1,104 @@
+.projectCard {
+  display: grid;
+  padding: 1.25rem 0 4.75rem;
+  gap: 1.6rem;
+  border-top: 1px solid rgba(19, 19, 24, 0.16);
+}
+
+.projectCard__visualLink {
+  display: block;
+  border-radius: 1.25rem;
+  outline-offset: 0.3rem;
+}
+
+.projectCard__content { align-self: center; }
+
+.projectCard__meta {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  gap: 0.65rem;
+  color: rgba(19, 19, 24, 0.5);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.projectCard__meta span {
+  display: grid;
+  width: 1.6rem;
+  height: 1.6rem;
+  place-items: center;
+  border: 1px solid rgba(19, 19, 24, 0.18);
+  border-radius: 50%;
+  color: #131318;
+}
+
+.projectCard h3 {
+  margin: 1rem 0 0;
+  font-size: clamp(2.7rem, 12vw, 5.5rem);
+  font-weight: 550;
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+}
+
+.projectCard h3 a { outline-offset: 0.2rem; }
+
+.projectCard__copy {
+  max-width: 32rem;
+  margin: 1.25rem 0 0;
+  color: rgba(19, 19, 24, 0.64);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.projectCard__tags {
+  display: flex;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+}
+
+.projectCard__tags li {
+  padding: 0.42rem 0.66rem;
+  border: 1px solid rgba(19, 19, 24, 0.16);
+  border-radius: 999px;
+  color: rgba(19, 19, 24, 0.62);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.52rem;
+  text-transform: uppercase;
+}
+
+.projectCard__link {
+  display: inline-flex;
+  margin-top: 1.6rem;
+  align-items: center;
+  gap: 1.6rem;
+  border-bottom: 1px solid rgba(19, 19, 24, 0.26);
+  color: #131318;
+  font-size: 0.75rem;
+  font-weight: 650;
+  line-height: 2.1;
+}
+
+.projectCard__link span { transition: transform 180ms ease; }
+.projectCard__link:hover span { transform: translate(0.18rem, -0.18rem); }
+
+@media (min-width: 64rem) {
+  .projectCard {
+    grid-template-columns: minmax(0, 1.55fr) minmax(18rem, 0.65fr);
+    padding: 1.5rem 0 7rem;
+    gap: clamp(2.5rem, 6vw, 6.5rem);
+  }
+
+  .projectCard:nth-child(even) {
+    grid-template-columns: minmax(18rem, 0.65fr) minmax(0, 1.55fr);
+  }
+
+  .projectCard:nth-child(even) .projectCard__visualLink { grid-column: 2; }
+  .projectCard:nth-child(even) .projectCard__content { grid-column: 1; grid-row: 1; }
+  .projectCard h3 { font-size: clamp(3.4rem, 5.2vw, 5.8rem); }
+}
