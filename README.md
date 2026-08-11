@@ -15,15 +15,15 @@ Portafolio comercial para presentar servicios de diseño y desarrollo web. La ex
 - Next.js 16 (App Router)
 - React 19
 - TypeScript
-- CSS Modules y Tailwind CSS 4
-- Vinext para el despliegue actual en Cloudflare Workers
+- CSS Modules con nomenclatura BEM
+- Fuentes Geist locales para un build reproducible
 
 ## Desarrollo local
 
-Requiere Node.js 22.13 o superior.
+Requiere Node.js 24.
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -36,4 +36,17 @@ npm run lint
 npm test
 ```
 
-Las pruebas verifican la home, las rutas de proyectos, el hero móvil, la paleta azul, el formulario y el contenido publicado.
+`npm test` genera el build nativo de Next.js, inicia el servidor de producción y
+verifica la home, las rutas de proyectos, el hero móvil, la paleta azul, el
+formulario, robots y sitemap.
+
+## Producción
+
+El repositorio usa el flujo estándar de Next.js:
+
+```bash
+npm run build
+npm start
+```
+
+Vercel detecta el framework automáticamente y publica el artefacto `.next`.

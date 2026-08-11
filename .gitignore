@@ -31,10 +31,16 @@ yarn-error.log*
 .env*
 
 # vercel
-.vercel
+/.vercel/
 
 # typescript
 next-env.d.ts
+*.tsbuildinfo
+
+# local tooling and generated output
+/.npm-cache/
+
+# legacy local build artifacts (never deploy)
 /dist/
 /.wrangler/
 /.sites-runtime/
